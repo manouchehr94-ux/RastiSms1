@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#101214"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RastiSMS Gateway"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stable SMS gateway with WebSocket + Poll fallback"
+            android:textColor="#AAB0B6"
+            android:textSize="13sp"
+            android:paddingBottom="16dp" />
+
+        <EditText android:id="@+id/etServer" android:hint="Server URL مثل http://10.242.186.49:8000" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etApi" android:hint="API Poll Path مثل /api/sms/gateway/poll/" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etWs" android:hint="WebSocket Path مثل /ws/sms/gateway/" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etToken" android:hint="Device Token" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etUser" android:hint="User" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etPass" android:hint="Password" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/etInterval" android:hint="Poll Interval seconds" android:text="7" android:textColor="#FFFFFF" android:textColorHint="#777777" android:singleLine="true" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <CheckBox android:id="@+id/swSending" android:text="Enable Sending" android:textColor="#FFFFFF" android:checked="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <CheckBox android:id="@+id/swReceiving" android:text="Enable Receiving" android:textColor="#FFFFFF" android:checked="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <CheckBox android:id="@+id/swAutoStart" android:text="Auto Start after reboot/network" android:textColor="#FFFFFF" android:checked="true" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/btnSave" android:text="Save Settings" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnTest" android:text="Test Connection" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnStart" android:text="Start Service" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnStop" android:text="Stop Service" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnBattery" android:text="Open Battery Settings" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnPerms" android:text="Open App Permissions" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:text="وضعیت: آماده"
+            android:textColor="#FFFFFF"
+            android:background="#1D2228"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>
